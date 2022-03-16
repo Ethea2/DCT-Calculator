@@ -6,7 +6,15 @@ const App: Component = () => {
 
   const compute = (c: number, t: number) => {
     setAnswer(() => {
-      return Math.round(Math.pow(((c - 300) / 9.6367), 1 / 3) * t)
+      const temp = (c - 300) / 9.6367
+      const ans = Math.round(Math.pow(temp, 0.3333))
+      const actualAnswer = ans * t
+      console.log(c)
+      console.log(t)
+      console.log(temp)
+      console.log(ans)
+      console.log(actualAnswer)
+      return actualAnswer
     })
   }
 
